@@ -60,7 +60,7 @@ const StoryBook = () => {
       text: "Era uma tarde especial de Agosto de 2020, quando marcamos um encontro, que marcou as nossas vidas...",
       media: {
         type: "image",
-        url: "/convite-casamento/arquivos/1.png"
+        url: "/convite-padrinhos/arquivos/1.png"
       }
     },
     {
@@ -69,8 +69,8 @@ const StoryBook = () => {
       media: {
         type: "carousel",
         items: [
-          { type: "image", url: "/convite-casamento/arquivos/2.png" },
-          { type: "image", url: "/convite-casamento/arquivos/3.png" }
+          { type: "image", url: "/convite-padrinhos/arquivos/2.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/3.png" }
         ]
       }
     },
@@ -80,14 +80,14 @@ const StoryBook = () => {
       media: {
         type: "carousel",
         items: [
-          { type: "image", url: "/convite-casamento/arquivos/4.png" },
-          { type: "image", url: "/convite-casamento/arquivos/5.png" },
-          { type: "image", url: "/convite-casamento/arquivos/6.png" },
-          { type: "image", url: "/convite-casamento/arquivos/7.png" },
-          { type: "image", url: "/convite-casamento/arquivos/8.png" },
-          { type: "image", url: "/convite-casamento/arquivos/9.png" },
-          { type: "image", url: "/convite-casamento/arquivos/10.png" },
-          { type: "image", url: "/convite-casamento/arquivos/11.png" }
+          { type: "image", url: "/convite-padrinhos/arquivos/4.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/5.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/6.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/7.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/8.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/9.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/10.png" },
+          { type: "image", url: "/convite-padrinhos/arquivos/11.png" }
         ]
       }
     },
@@ -96,7 +96,7 @@ const StoryBook = () => {
       text: "No momento perfeito, as palavras certas fizeram o coração transbordar de alegria...",
       media: {
         type: "video",
-        url: "/convite-casamento/arquivos/13.mp4"
+        url: "/convite-padrinhos/arquivos/13.mp4"
       }
     },
     {
@@ -133,7 +133,7 @@ const StoryBook = () => {
   const MusicControl = () => (
     <button
       onClick={toggleMusic}
-      style={{backgroundColor: '#967AA1'}}
+      style={{backgroundColor: '#034078'}}
       className="fixed top-4 left-4 px-4 py-2 rounded-full shadow-lg text-white hover:bg-opacity-90 transition-all z-50 backdrop-blur-sm flex items-center gap-2"
     >
       {isPlaying ? (
@@ -150,14 +150,14 @@ const StoryBook = () => {
   const renderCoverPage = () => (
     <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
       <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
-        <Heart style={{color: '#967AA1'}} className="w-16 h-16 mx-auto animate-pulse" />
+        <Heart style={{color: '#034078'}} className="w-16 h-16 mx-auto animate-pulse" />
         
         <div className="space-y-6">
-          <h1 style={{color: '#192A51'}} className="text-4xl sm:text-6xl font-serif">
+          <h1 style={{color: '#0A1128'}} className="text-4xl sm:text-6xl font-serif">
             Lucca & Paloma
           </h1>
           
-          <p style={{color: '#967AA1'}} className="text-xl font-light italic px-4">
+          <p style={{color: '#001F54'}} className="text-xl font-light italic px-4">
             "Quando dois corações se encontram, 
             nasce uma história que merece ser eternizada..."
           </p>
@@ -166,7 +166,7 @@ const StoryBook = () => {
         <div className="flex justify-center pt-8">
           <button 
             onClick={() => setCurrentPage(currentPage + 1)}
-            style={{backgroundColor: '#967AA1'}}
+            style={{backgroundColor: '#034078'}}
             className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
           >
             <span>Descobrir Nossa História</span>
@@ -179,49 +179,49 @@ const StoryBook = () => {
   const renderInvitationPage = () => (
     <div className="text-center space-y-8 py-4 sm:py-8 px-2 sm:px-8">
       <div className="space-y-6">
-        <Heart style={{color: '#967AA1'}} className="w-12 h-12 mx-auto animate-pulse" />
-        <h2 style={{color: '#192A51'}} className="text-3xl sm:text-5xl font-serif">
+        <Heart style={{color: '#034078'}} className="w-12 h-12 mx-auto animate-pulse" />
+        <h2 style={{color: '#0A1128'}} className="text-3xl sm:text-5xl font-serif">
           Convite Especial
         </h2>
-        <p style={{color: '#967AA1'}} className="text-lg sm:text-xl font-light italic">
+        <p style={{color: '#001F54'}} className="text-lg sm:text-xl font-light italic">
           Com muita alegria convidamos você para celebrar nosso amor...
         </p>
       </div>
 
       <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg space-y-8 p-4 sm:p-8">
-        <p className="text-lg sm:text-xl leading-relaxed" style={{color: '#192A51'}}>
+        <p className="text-lg sm:text-xl leading-relaxed" style={{color: '#0A1128'}}>
           Com imensa felicidade e amor, gostaríamos de convidá-lo(a) para celebrar 
           conosco o início desta nova e maravilhosa etapa de nossas vidas.
         </p>
 
         <div className="space-y-6">
           <div className="flex items-center justify-center gap-2">
-            <Calendar style={{color: '#967AA1'}} className="w-6 h-6" />
-            <p style={{color: '#192A51'}} className="text-xl sm:text-2xl font-medium">
+            <Calendar style={{color: '#034078'}} className="w-6 h-6" />
+            <p style={{color: '#0A1128'}} className="text-xl sm:text-2xl font-medium">
               27 de Dezembro de 2025
             </p>
           </div>
 
           {/* Cerimônia */}
-          <div style={{backgroundColor: '#F5E6E8'}} 
-               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md">
-            <h3 style={{color: '#192A51'}} className="text-xl font-medium">Cerimônia</h3>
+          <div style={{backgroundColor: '#FEFCFB'}} 
+               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md border border-[#1282A2]">
+            <h3 style={{color: '#0A1128'}} className="text-xl font-medium">Cerimônia</h3>
             <div className="space-y-2">
-              <p style={{color: '#192A51'}} className="text-lg">17:30 horas</p>
-              <p style={{color: '#192A51'}} className="text-lg font-medium">
-              Igreja Nossa Senhora da Luz
+              <p style={{color: '#0A1128'}} className="text-lg">17:30 horas</p>
+              <p style={{color: '#0A1128'}} className="text-lg font-medium">
+                Igreja Nossa Senhora da Luz
               </p>
-              <p style={{color: '#192A51'}} className="text-lg">
-              Av. Nossa Sra. da Luz, 194 - Centro
+              <p style={{color: '#0A1128'}} className="text-lg">
+                Av. Nossa Sra. da Luz, 194 - Centro
               </p>
-              <p style={{color: '#192A51'}} className="text-lg">Clevelândia - PR</p>
+              <p style={{color: '#0A1128'}} className="text-lg">Clevelândia - PR</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 pt-4">
               <button
                 onClick={() => {
-                  window.open('https://www.google.com/maps/place/Igreja+Nossa+Senhora+da+Luz/@-26.4054754,-52.3553762,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC%3Dw114-h86-k-no!7i4032!8i3024!4m7!3m6!1s0x94e53dc34c0375fb:0x439b0cf20cda5c80!8m2!3d-26.4054117!4d-52.35541!10e5!16s%2Fg%2F11fn8ww954?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D');
+                  window.open('https://www.google.com/maps/place/Igreja+Nossa+Senhora+da+Luz/@-26.4054754,-52.3553762,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC%3Dw114-h86-k-no!7i4032!8i3024!4m7!3m6!1s0x94e53dc34c0375fb:0x439b0cf20cda5c80!8m2!3d-26.4054117!4d-52.35541!10e5!16s%2Fg%2F11fn8ww954?entry=ttu');
                 }}
-                style={{backgroundColor: '#967AA1'}}
+                style={{backgroundColor: '#034078'}}
                 className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
               >
                 <Map className="w-4 h-4" />
@@ -237,7 +237,7 @@ const StoryBook = () => {
                   const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.text)}&dates=${event.dates}/${event.dates}&location=${encodeURIComponent(event.location)}`;
                   window.open(googleCalendarUrl);
                 }}
-                style={{backgroundColor: '#AAA1C8'}}
+                style={{backgroundColor: '#001F54'}}
                 className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
@@ -247,25 +247,25 @@ const StoryBook = () => {
           </div>
 
           {/* Festa */}
-          <div style={{backgroundColor: '#F5E6E8'}} 
-               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md">
-            <h3 style={{color: '#192A51'}} className="text-xl font-medium">Festa</h3>
+          <div style={{backgroundColor: '#FEFCFB'}} 
+               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md border border-[#1282A2]">
+            <h3 style={{color: '#0A1128'}} className="text-xl font-medium">Festa</h3>
             <div className="space-y-2">
-              <p style={{color: '#192A51'}} className="text-lg">20:00 horas</p>
-              <p style={{color: '#192A51'}} className="text-lg font-medium">
+              <p style={{color: '#0A1128'}} className="text-lg">20:00 horas</p>
+              <p style={{color: '#0A1128'}} className="text-lg font-medium">
                 Clube Grêmio Mariopolitano
               </p>
-              <p style={{color: '#192A51'}} className="text-lg">
-                Alamenda Um, 1450 - Centro
+              <p style={{color: '#0A1128'}} className="text-lg">
+                Alameda Um, 1450 - Centro
               </p>
-              <p style={{color: '#192A51'}} className="text-lg">Mariopólis - PR</p>
+              <p style={{color: '#0A1128'}} className="text-lg">Mariópolis - PR</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 pt-4">
               <button
                 onClick={() => {
-                  window.open('https://www.google.com/maps/place/Clube+Gr%C3%AAmio+Mariopolitano/@-26.360187,-52.6215843,13z/data=!4m10!1m2!2m1!1sclube+mariopolis!3m6!1s0x94e54813b25716c5:0x7057fd14b9cf9b90!8m2!3d-26.360187!4d-52.5453666!15sChBjbHViZSBtYXJpb3BvbGlzWhIiEGNsdWJlIG1hcmlvcG9saXOSAQZzcG9ydHOaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhNVkF0VTJGbkVBReABAPoBBAgAEDQ!16s%2Fg%2F1hc8m061g?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D');
+                  window.open('https://www.google.com/maps/place/Clube+Gr%C3%AAmio+Mariopolitano/@-26.360187,-52.6215843,13z/data=!4m10!1m2!2m1!1sclube+mariopolis!3m6!1s0x94e54813b25716c5:0x7057fd14b9cf9b90!8m2!3d-26.360187!4d-52.5453666!15sChBjbHViZSBtYXJpb3BvbGlzWhIiEGNsdWJlIG1hcmlvcG9saXOSAQZzcG9ydHOaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhNVkF0VTJGbkVBReABAPoBBAgAEDQ!16s%2Fg%2F1hc8m061g?entry=ttu');
                 }}
-                style={{backgroundColor: '#967AA1'}}
+                style={{backgroundColor: '#034078'}}
                 className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
               >
                 <Map className="w-4 h-4" />
@@ -281,7 +281,7 @@ const StoryBook = () => {
                   const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.text)}&dates=${event.dates}/${event.dates}&location=${encodeURIComponent(event.location)}`;
                   window.open(googleCalendarUrl);
                 }}
-                style={{backgroundColor: '#AAA1C8'}}
+                style={{backgroundColor: '#001F54'}}
                 className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
@@ -292,11 +292,11 @@ const StoryBook = () => {
         </div>
 
         <div className="space-y-4">
-          <p style={{color: '#192A51'}} className="text-lg">
+          <p style={{color: '#0A1128'}} className="text-lg">
             Por favor, confirme sua presença até 27 de Setembro de 2025
           </p>
           <button 
-            style={{backgroundColor: '#967AA1'}}
+            style={{backgroundColor: '#034078'}}
             className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
           >
             Confirmar Presença
@@ -305,18 +305,18 @@ const StoryBook = () => {
 
         <div className="space-y-4">
           <div className="text-center max-w-xl mx-auto">
-            <p style={{color: '#192A51'}} className="text-lg leading-relaxed">
+            <p style={{color: '#0A1128'}} className="text-lg leading-relaxed">
               O verdadeiro presente é poder compartilhar este momento único com você.
               Sua presença é o que tornará nosso dia ainda mais especial e memorável.
             </p>
-            <p style={{color: '#192A51'}} className="text-lg leading-relaxed mt-4">
+            <p style={{color: '#0A1128'}} className="text-lg leading-relaxed mt-4">
               Aos queridos que manifestaram interesse em nos presentear além de sua presença, 
               compartilhamos que estamos iniciando a construção do nosso lar juntos.
             </p>
             
-            <div style={{backgroundColor: '#F5E6E8'}} 
-                 className="rounded-lg p-4 mt-6 transition-all hover:shadow-md">
-              <p style={{color: '#192A51'}} className="font-light mb-3">Nossa chave PIX:</p>
+            <div style={{backgroundColor: '#FEFCFB'}} 
+                 className="rounded-lg p-4 mt-6 transition-all hover:shadow-md border border-[#1282A2]">
+              <p style={{color: '#0A1128'}} className="font-light mb-3">Nossa chave PIX:</p>
               <div className="flex items-center justify-center gap-2 w-full max-w-sm mx-auto">
                 <input 
                   type="text" 
@@ -326,7 +326,7 @@ const StoryBook = () => {
                 />
                 <button
                   onClick={copyPixKey}
-                  style={{backgroundColor: '#967AA1'}}
+                  style={{backgroundColor: '#034078'}}
                   className="px-4 py-2 rounded-r-lg border-y border-r transition-colors text-white hover:bg-opacity-90 flex-shrink-0"
                 >
                   <Copy className="w-5 h-5" />
@@ -341,15 +341,14 @@ const StoryBook = () => {
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen w-full overflow-x-hidden flex flex-col items-center justify-center" 
-         style={{backgroundColor: '#F5E6E8'}}>
+         style={{backgroundColor: '#FEFCFB'}}>
       <audio
         ref={audioRef}
         loop
         style={{ display: 'none' }}
-        src="/convite-casamento/arquivos/musica.mp3"
+        src="/convite-padrinhos/arquivos/musica.mp3"
       />
 
       <MusicControl />
@@ -362,7 +361,7 @@ const StoryBook = () => {
             renderInvitationPage()
           ) : (
             <div className="mb-8 space-y-6">
-              <h2 style={{color: '#192A51'}} className="text-2xl sm:text-3xl font-serif text-center">
+              <h2 style={{color: '#0A1128'}} className="text-2xl sm:text-3xl font-serif text-center">
                 {pages[currentPage].title}
               </h2>
               
@@ -390,7 +389,7 @@ const StoryBook = () => {
                 </div>
                 
                 <div className="w-full md:w-1/2">
-                  <p style={{color: '#192A51'}} className="text-lg leading-relaxed">
+                  <p style={{color: '#0A1128'}} className="text-lg leading-relaxed">
                     {pages[currentPage].text}
                   </p>
                 </div>
@@ -404,7 +403,7 @@ const StoryBook = () => {
               {currentPage > 0 && (
                 <button
                   onClick={() => setCurrentPage(currentPage - 1)}
-                  style={{backgroundColor: '#AAA1C8'}}
+                  style={{backgroundColor: '#001F54'}}
                   className="p-3 rounded-full text-white hover:bg-opacity-90 transition-all shadow-md"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -414,7 +413,7 @@ const StoryBook = () => {
               {currentPage < pages.length - 1 && (
                 <button
                   onClick={() => setCurrentPage(currentPage + 1)}
-                  style={{backgroundColor: '#AAA1C8'}}
+                  style={{backgroundColor: '#001F54'}}
                   className={`p-3 rounded-full text-white hover:bg-opacity-90 transition-all shadow-md ${
                     currentPage === 0 ? 'ml-auto' : ''
                   }`}

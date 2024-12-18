@@ -196,7 +196,7 @@ const StoryBook = () => {
             onClick={() => setCurrentPage(currentPage + 1)}
             style={{backgroundColor: '#034078'}}
             className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
-          >
+           > Nossa Hitória 
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>

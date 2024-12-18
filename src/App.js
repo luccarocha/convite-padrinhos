@@ -297,7 +297,9 @@ const StoryBook = () => {
             <div className="space-y-2">
               <p className="font-medium" style={{color: '#001F54'}}>Trajes</p>
               <p style={{color: '#0A1128'}}>
-                As cores escolhidas para os padrinhos são azul marinho e rosa claro.
+                Optamos por não escolher cores para as vestimentas dos padrinhos, 
+                mas devem se atentar para não usarem as cores dos noivos: 
+                Que são azul marinho e braco.
                 Mais detalhes serão enviados em nosso grupo exclusivo.
               </p>
             </div>
@@ -336,8 +338,140 @@ const StoryBook = () => {
           </div>
 
           {/* Cerimônia */}
-          [... resto do código da cerimônia e festa ...]
+          <div style={{backgroundColor: '#FEFCFB'}} 
+               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md border border-[#1282A2]">
+            <h3 style={{color: '#0A1128'}} className="text-xl font-medium">Cerimônia</h3>
+            <div className="space-y-2">
+              <p style={{color: '#0A1128'}} className="text-lg">17:30 horas</p>
+              <p style={{color: '#0A1128'}} className="text-lg font-medium">
+                Igreja Nossa Senhora da Luz
+              </p>
+              <p style={{color: '#0A1128'}} className="text-lg">
+                Av. Nossa Sra. da Luz, 194 - Centro
+              </p>
+              <p style={{color: '#0A1128'}} className="text-lg">Clevelândia - PR</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2 pt-4">
+              <button
+                onClick={() => {
+                  window.open('https://www.google.com/maps/place/Igreja+Nossa+Senhora+da+Luz/@-26.4054754,-52.3553762,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipN2srrWdGyDefwveWJzaZR_IGrMKAp5XFKgAhlC%3Dw114-h86-k-no!7i4032!8i3024!4m7!3m6!1s0x94e53dc34c0375fb:0x439b0cf20cda5c80!8m2!3d-26.4054117!4d-52.35541!10e5!16s%2Fg%2F11fn8ww954?entry=ttu');
+                }}
+                style={{backgroundColor: '#034078'}}
+                className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+              >
+                <Map className="w-4 h-4" />
+                Ver no Maps
+              </button>
+              <button
+                onClick={() => {
+                  const event = {
+                    text: "Cerimônia de Casamento",
+                    dates: "20251227T170000",
+                    location: "Igreja Matriz Nossa Senhora da Luz"
+                  };
+                  const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.text)}&dates=${event.dates}/${event.dates}&location=${encodeURIComponent(event.location)}`;
+                  window.open(googleCalendarUrl);
+                }}
+                style={{backgroundColor: '#001F54'}}
+                className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-4 h-4" />
+                Save the Date
+              </button>
+            </div>
+          </div>
 
+          {/* Festa */}
+          <div style={{backgroundColor: '#FEFCFB'}} 
+               className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md border border-[#1282A2]">
+            <h3 style={{color: '#0A1128'}} className="text-xl font-medium">Festa</h3>
+            <div className="space-y-2">
+              <p style={{color: '#0A1128'}} className="text-lg">20:00 horas</p>
+              <p style={{color: '#0A1128'}} className="text-lg font-medium">
+                Clube Grêmio Mariopolitano
+              </p>
+              <p style={{color: '#0A1128'}} className="text-lg">
+                Alameda Um, 1450 - Centro
+              </p>
+              <p style={{color: '#0A1128'}} className="text-lg">Mariópolis - PR</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-2 pt-4">
+              <button
+                onClick={() => {
+                  window.open('https://www.google.com/maps/place/Clube+Gr%C3%AAmio+Mariopolitano/@-26.360187,-52.6215843,13z/data=!4m10!1m2!2m1!1sclube+mariopolis!3m6!1s0x94e54813b25716c5:0x7057fd14b9cf9b90!8m2!3d-26.360187!4d-52.5453666!15sChBjbHViZSBtYXJpb3BvbGlzWhIiEGNsdWJlIG1hcmlvcG9saXOSAQZzcG9ydHOaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhNVkF0VTJGbkVBReABAPoBBAgAEDQ!16s%2Fg%2F1hc8m061g?entry=ttu');
+                }}
+                style={{backgroundColor: '#034078'}}
+                className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+              >
+                <Map className="w-4 h-4" />
+                Ver no Maps
+              </button>
+              <button
+                onClick={() => {
+                  const event = {
+                    text: "Festa de Casamento",
+                    dates: "20251227T200000",
+                    location: "Clube Grêmio Mariopolitano"
+                  };
+                  const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.text)}&dates=${event.dates}/${event.dates}&location=${encodeURIComponent(event.location)}`;
+                  window.open(googleCalendarUrl);
+                }}
+                style={{backgroundColor: '#001F54'}}
+                className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-4 h-4" />
+                Save the Date
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <p style={{color: '#0A1128'}} className="text-lg">
+            Por favor, confirme sua presença até 27 de Setembro de 2025
+          </p>
+          <button 
+            style={{backgroundColor: '#034078'}}
+            className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
+          >
+            Confirmar Presença
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          <div className="text-center max-w-xl mx-auto">
+            <p style={{color: '#0A1128'}} className="text-lg leading-relaxed">
+              O verdadeiro presente é poder compartilhar este momento único com você.
+              Sua presença é o que tornará nosso dia ainda mais especial e memorável.
+            </p>
+            <p style={{color: '#0A1128'}} className="text-lg leading-relaxed mt-4">
+              Aos queridos que manifestaram interesse em nos presentear além de sua presença, 
+              compartilhamos que estamos iniciando a construção do nosso lar juntos.
+            </p>
+            
+            <div style={{backgroundColor: '#FEFCFB'}} 
+                 className="rounded-lg p-4 mt-6 transition-all hover:shadow-md border border-[#1282A2]">
+              <p style={{color: '#0A1128'}} className="font-light mb-3">Nossa chave PIX:</p>
+              <div className="flex items-center justify-center gap-2 w-full max-w-sm mx-auto">
+                <input 
+                  type="text" 
+                  value={pixKey}
+                  readOnly
+                  className="w-full px-4 py-2 border rounded-l-lg bg-white text-gray-700"
+                />
+                <button
+                  onClick={copyPixKey}
+                  style={{backgroundColor: '#034078'}}
+                  className="px-4 py-2 rounded-r-lg border-y border-r transition-colors text-white hover:bg-opacity-90 flex-shrink-0"
+                >
+                  <Copy className="w-5 h-5" />
+                </button>
+              </div>
+              {showCopySuccess && (
+                <p className="text-green-600 text-sm mt-2">Chave PIX copiada!</p>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

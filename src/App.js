@@ -118,11 +118,21 @@ const StoryBook = () => {
       type: "accepted",
       title: "Que Alegria!"
     },
+
+    {
+      type: "thank-you-video",
+      title: "Nosso Agradecimento",
+      media: {
+        type: "video",
+        url: "/convite-padrinhos/arquivos/agradecimento.mp4"
+      }
+    },
     {
       type: "invitation",
       title: "Convite Especial"
     }
   ];
+
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = 0.5;
@@ -187,7 +197,6 @@ const StoryBook = () => {
             style={{backgroundColor: '#034078'}}
             className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
           >
-            <span>Descobrir Nossa História</span>
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -209,14 +218,6 @@ const StoryBook = () => {
             Se você está vendo essa parte, significa que tem algo a mais por vir...
           </p>
         </div>
-
-        <button 
-          onClick={() => setCurrentPage(currentPage + 1)}
-          style={{backgroundColor: '#034078'}}
-          className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
-        >
-          Descobrir
-        </button>
       </div>
     </div>
   );
@@ -255,30 +256,54 @@ const StoryBook = () => {
       </div>
     </div>
   );
-  const renderAcceptedPage = () => (
-    <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
-      <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
-        <Heart style={{color: '#034078'}} className="w-16 h-16 mx-auto animate-pulse" />
-        
-        <h1 style={{color: '#0A1128'}} className="text-4xl sm:text-6xl font-serif">
-          Que Alegria!
-        </h1>
-        
-        <p style={{color: '#001F54'}} className="text-xl leading-relaxed">
-          Vocês são muito especiais em nossas vidas e ter vocês ao nosso lado
-          nesse momento único será uma honra...
-        </p>
 
-        <button 
-          onClick={() => setCurrentPage(currentPage + 1)}
-          style={{backgroundColor: '#034078'}}
-          className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
-        >
-          Ver Detalhes
-        </button>
+const renderAcceptedPage = () => (
+  <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
+    <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
+      <Heart style={{color: '#034078'}} className="w-16 h-16 mx-auto animate-pulse" />
+      
+      <h1 style={{color: '#0A1128'}} className="text-4xl sm:text-6xl font-serif">
+        Que Alegria!
+      </h1>
+      
+      <div className="space-y-6">
+        <p style={{color: '#001F54'}} className="text-xl leading-relaxed">
+          Nossos corações transbordam de felicidade com o seu "sim"! Ter vocês ao nosso lado
+          neste momento tão especial é uma benção. Mais que padrinhos, vocês são parte fundamental
+          da nossa história e da família que estamos construindo.
+        </p>
+        <p style={{color: '#001F54'}} className="text-xl leading-relaxed">
+          Preparamos uma mensagem especial para vocês...
+        </p>
       </div>
     </div>
-  );
+  </div>
+);
+
+const renderThankYouVideo = () => (
+  <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
+    <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
+      <h2 style={{color: '#0A1128'}} className="text-3xl sm:text-4xl font-serif">
+        Nosso Agradecimento Especial
+      </h2>
+      
+      <div className="w-full">
+        <video
+          className="w-full rounded-lg shadow-md"
+          controls
+          autoPlay={false}
+          playsInline
+          preload="metadata"
+        >
+          <source src={pages[currentPage].media.url} type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
+    </div>
+  </div>
+);
+
+
   const renderInvitationPage = () => (
     <div className="text-center space-y-8 py-4 sm:py-8 px-2 sm:px-8">
       <div className="space-y-6">
@@ -427,25 +452,13 @@ const StoryBook = () => {
         </div>
 
         <div className="space-y-4">
-          <p style={{color: '#0A1128'}} className="text-lg">
-            Por favor, confirme sua presença até 27 de Setembro de 2025
-          </p>
-          <button 
-            style={{backgroundColor: '#034078'}}
-            className="text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
-          >
-            Confirmar Presença
-          </button>
-        </div>
-
-        <div className="space-y-4">
           <div className="text-center max-w-xl mx-auto">
             <p style={{color: '#0A1128'}} className="text-lg leading-relaxed">
               O verdadeiro presente é poder compartilhar este momento único com você.
               Sua presença é o que tornará nosso dia ainda mais especial e memorável.
             </p>
             <p style={{color: '#0A1128'}} className="text-lg leading-relaxed mt-4">
-              Aos queridos que manifestaram interesse em nos presentear além de sua presença, 
+              Caso manifestem o interesse em nos presentear além de sua presença, 
               compartilhamos que estamos iniciando a construção do nosso lar juntos.
             </p>
             
@@ -499,6 +512,8 @@ const StoryBook = () => {
             renderQuestionPage()
           ) : pages[currentPage].type === 'accepted' ? (
             renderAcceptedPage()
+          ) : pages[currentPage].type === 'thank-you-video' ? (
+            renderThankYouVideo()
           ) : pages[currentPage].type === 'invitation' ? (
             renderInvitationPage()
           ) : (

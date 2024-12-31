@@ -221,42 +221,44 @@ const StoryBook = () => {
       </div>
     </div>
   );
-
   const renderQuestionPage = () => (
-    <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
-      <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
-        <h1 style={{color: '#0A1128'}} className="text-4xl sm:text-6xl font-serif">
-          Vocês aceitam ser
-          nossos padrinhos?
-        </h1>
-        
-        <div className="flex justify-center gap-16 pt-8">
-          <button 
-            onClick={() => setCurrentPage(currentPage + 1)}
-            style={{backgroundColor: '#034078'}}
-            className="text-white px-12 py-4 text-xl rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
-          >
-            Sim!
-          </button>
+    <div className="text-center p-4 sm:p-8 min-h-screen flex flex-col items-center justify-center">
+      <div className="w-full max-w-2xl mx-auto p-4 sm:p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">
+        <div className="space-y-8 sm:space-y-12">
+          <h1 style={{color: '#0A1128'}} 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
+            Vocês aceitam ser nossos padrinhos?
+          </h1>
           
-          <button 
-            onClick={moveNoButton}
-            style={{
-              backgroundColor: '#001F54',
-              position: noButtonPosition.top !== null ? 'fixed' : 'relative',
-              top: noButtonPosition.top ? `${noButtonPosition.top}px` : 'auto',
-              left: noButtonPosition.left ? `${noButtonPosition.left}px` : 'auto',
-              transition: 'all 0.2s ease'
-            }}
-            className="text-white px-12 py-4 text-xl rounded-full hover:bg-opacity-90 shadow-lg"
-          >
-            Não
-          </button>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 pt-4 sm:pt-8">
+            <button 
+              onClick={() => setCurrentPage(currentPage + 1)}
+              style={{backgroundColor: '#034078'}}
+              className="w-full sm:w-auto text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Sim!
+            </button>
+            
+            <button 
+              onClick={moveNoButton}
+              style={{
+                backgroundColor: '#001F54',
+                position: noButtonPosition.top !== null ? 'fixed' : 'relative',
+                top: noButtonPosition.top ? `${noButtonPosition.top}px` : 'auto',
+                left: noButtonPosition.left ? `${noButtonPosition.left}px` : 'auto',
+                zIndex: 50,
+                transition: 'all 0.2s ease'
+              }}
+              className="w-full sm:w-auto text-white px-8 sm:px-12 py-3 sm:py-4 text-lg sm:text-xl rounded-full hover:bg-opacity-90 shadow-lg"
+            >
+              Não
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
-
+  
 const renderAcceptedPage = () => (
   <div className="text-center space-y-12 py-4 sm:py-8 px-2 sm:px-8 min-h-[60vh] flex flex-col items-center justify-center">
     <div className="space-y-12 max-w-2xl mx-auto p-8 rounded-lg bg-white/80 backdrop-blur-sm shadow-lg">

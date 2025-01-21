@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/convite-padrinhos/static/css/main.df942dd5.css",
-    "main.js": "/convite-padrinhos/static/js/main.2efe6288.js",
+    "main.js": "/convite-padrinhos/static/js/main.508afb82.js",
     "static/js/488.6825971a.chunk.js": "/convite-padrinhos/static/js/488.6825971a.chunk.js",
     "index.html": "/convite-padrinhos/index.html",
     "main.df942dd5.css.map": "/convite-padrinhos/static/css/main.df942dd5.css.map",
-    "main.2efe6288.js.map": "/convite-padrinhos/static/js/main.2efe6288.js.map",
+    "main.508afb82.js.map": "/convite-padrinhos/static/js/main.508afb82.js.map",
     "488.6825971a.chunk.js.map": "/convite-padrinhos/static/js/488.6825971a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df942dd5.css",
-    "static/js/main.2efe6288.js"
+    "static/js/main.508afb82.js"
   ]
 }

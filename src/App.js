@@ -369,7 +369,7 @@ const renderThankYouVideo = () => (
                className="p-4 rounded-lg space-y-4 transition-all hover:shadow-md border border-[#1282A2]">
             <h3 style={{color: '#0A1128'}} className="text-xl font-medium">Cerimônia</h3>
             <div className="space-y-2">
-              <p style={{color: '#0A1128'}} className="text-lg">17:30 horas</p>
+              <p style={{color: '#0A1128'}} className="text-lg">17:00 horas</p>
               <p style={{color: '#0A1128'}} className="text-lg font-medium">
                 Igreja Nossa Senhora da Luz
               </p>

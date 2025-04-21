@@ -64,7 +64,7 @@ const StoryBook = () => {
     },
     {
       title: "O Primeiro Encontro",
-      text: "Era uma tarde especial de Agosto de 2020, quando marcamos um encontro, que marcou as nossas vidas...",
+      text: "Era uma tarde especial no dia 20 de Agosto de 2020, quando marcamos um encontro, que marcou as nossas vidas...",
       media: {
         type: "image",
         url: "/convite-padrinhos/arquivos/1.png"
@@ -72,8 +72,8 @@ const StoryBook = () => {
     },
     {
       title: "O Pedido de Namoro",
-      text: "Sob as estrelas, com o coração acelerado, ele preparou uma surpresa inesquecível...",
-      media: {
+      text: "No dia 18 de Dezembro de 2020, com o coração acelerado, ele preparou uma surpresa inesquecível e ela disse: SIM... ",
+       media: {
         type: "carousel",
         items: [
           { type: "image", url: "/convite-padrinhos/arquivos/2.png" },
@@ -100,10 +100,21 @@ const StoryBook = () => {
     },
     {
       title: "O Pedido de Casamento",
-      text: "No momento perfeito, as palavras certas fizeram o coração transbordar de alegria...",
-      media: {
+      text: "21 de Julho de 2024 um momento perfeito, as palavras certas fizeram o coração transbordar de alegria...",
+        media: {
         type: "video",
         url: "/convite-padrinhos/arquivos/13.mp4"
+      }
+    },
+    {
+      title: "Casamento no Civil",
+      text: "Em 13 de Fevereiro de 2025 começamos nossa vida casados, escolhemos legalmente nos tornar uma única história, onde cada página será escrita com a tinta do amor e da cumplicidade....",
+      media: {
+        type: "carousel",
+        items: [
+          { type: "image", url: "/convite-casamento/arquivos/14.png" },
+          { type: "image", url: "/convite-casamento/arquivos/15.png" }
+        ]
       }
     },
     {
@@ -415,17 +426,17 @@ const renderThankYouVideo = () => (
             <div className="space-y-2">
               <p style={{color: '#0A1128'}} className="text-lg">20:00 horas</p>
               <p style={{color: '#0A1128'}} className="text-lg font-medium">
-                Clube Grêmio Mariopolitano
+                Restaurante Ferreiras
               </p>
               <p style={{color: '#0A1128'}} className="text-lg">
-                Alameda Um, 1450 - Centro
+                R. Cel. Manoel Ferreira Bello, 639 - Centro
               </p>
-              <p style={{color: '#0A1128'}} className="text-lg">Mariópolis - PR</p>
+              <p style={{color: '#0A1128'}} className="text-lg">Clevelândia - PR</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 pt-4">
               <button
                 onClick={() => {
-                  window.open('https://www.google.com/maps/place/Clube+Gr%C3%AAmio+Mariopolitano/@-26.360187,-52.6215843,13z/data=!4m10!1m2!2m1!1sclube+mariopolis!3m6!1s0x94e54813b25716c5:0x7057fd14b9cf9b90!8m2!3d-26.360187!4d-52.5453666!15sChBjbHViZSBtYXJpb3BvbGlzWhIiEGNsdWJlIG1hcmlvcG9saXOSAQZzcG9ydHOaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTlhNVkF0VTJGbkVBReABAPoBBAgAEDQ!16s%2Fg%2F1hc8m061g?entry=ttu');
+                  window.open('https://bit.ly/festadecasamentolp');
                 }}
                 style={{backgroundColor: '#034078'}}
                 className="flex-1 text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
@@ -438,7 +449,7 @@ const renderThankYouVideo = () => (
                   const event = {
                     text: "Festa de Casamento",
                     dates: "20251227T200000",
-                    location: "Clube Grêmio Mariopolitano"
+                    location: "Restaurante Ferreiras"
                   };
                   const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.text)}&dates=${event.dates}/${event.dates}&location=${encodeURIComponent(event.location)}`;
                   window.open(googleCalendarUrl);

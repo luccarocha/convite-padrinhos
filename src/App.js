@@ -358,7 +358,7 @@ const renderThankYouVideo = () => (
             </div>
 
             <button 
-              onClick={() => window.open('https://chat.whatsapp.com/seugrupo')}
+              onClick={() => window.open('https://chat.whatsapp.com/FV3OHU5VBiuGlE2hPSqRZK')}
               style={{backgroundColor: '#034078'}}
               className="w-full text-white px-4 py-2 rounded-full hover:bg-opacity-90 transition-all mt-4"
             >
